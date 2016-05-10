@@ -1,0 +1,19 @@
+h1{
+	color: #777777;
+	text-align: center;
+}
+p{
+	max-width: 65%;
+	text-align: center;
+	margin: auto;
+}
+hr{
+	border: 1px solid #404040;
+	max-width: 70%;
+}
+img{
+	max-width: 300px;
+}
+.post_image{
+	display: table; margin: 0 auto;
+}

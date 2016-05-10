@@ -1,14 +1,17 @@
-<!-- DOCTYPE HTML -->
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<h1>{{ instance.title }}</h1>
-<p>{{ instance.body }}</p>
-<h6>Created: {{ instance.timestamp }}</h6>
-<h6>Last updated: {{ instance.updated }}</h6>
-<h6>Post Number: {{ instance.id }}</h6>
-</body>
-</html>
+{% extends "base.html" %}
+{% block head_title %}
+	{{  instance.title }} - {{  block.super }}
+{% endblock head_title %}
+
+{% block content %}
+	<h1>{{ instance.title }}</h1>
+	<hr>
+	<div class="post_image">
+		<img src="{{ instance.image.url }}" />
+	</div>
+	<p>{{ instance.body }}</p>
+	<hr>
+	<h4>Created: {{ instance.timestamp }}</h4>
+	<h4>Last updated: {{ instance.updated }}</h4>
+	<h6>Post Number: {{ instance.id }}</h6>
+{% endblock content %}

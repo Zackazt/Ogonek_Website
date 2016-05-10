@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>{{ title }} is working!</h1>
+	<hr>
+	{% for obj in object_list %}
+		<ul>
+			<a href='{{ obj.get_absolute_url }}'>
+		    	<h2>{{ obj.title }}</h2>
+			</a>
+			<li>{{ obj.body|truncatechars:50 }}</li>
+			<li>{{ obj.timestamp }}</li>
+			<li>{{ obj.updated }}</li>
+			<li>{{ obj.id }}</li>
+		</ul>
+		<hr>
+	{% endfor %}
+	<div class="pagination">
+    	<span class="step-links">
+       		{% if object_list.has_previous %}
+            	<a href="?page={{ object_list.previous_page_number }}">previous</a>
+        	{% endif %}
+        	<span class="current">
+            	Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+        	</span>
+        	{% if object_list.has_next %}
+            	<a href="?page={{ object_list.next_page_number }}">next</a>
+        	{% endif %}
+    	</span>
+	</div>
+{% endblock content %}
