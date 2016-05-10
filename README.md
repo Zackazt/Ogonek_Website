@@ -13,7 +13,7 @@ A post contains a title, a body of text, and an image.  Once again, I may expand
 
 ### What is Ogonek?
 ---
-THE Ogonek is a small tail added to vowels in the Latin alphabet.  Ogonek is the name of a small orginization that produces for your enjoyment.
+THE Ogonek is a small tail added to vowels in the Latin alphabet.  Ogonek is the name of a small orginization that produces content.
 
 ### How can I get involved?
 ---
