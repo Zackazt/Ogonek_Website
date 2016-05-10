@@ -21,4 +21,12 @@ The development team will remain very small in the beginning so our interest in 
 
 If you are interested in getting involved in this project, please email me at: zackazt@gmail.com
 
+---
+Currently in construction:
+* Layout and design.
+* Front-end functionality.
+* User accounts.
+* Commenting.
+* Sharing.
+
 
