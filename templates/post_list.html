@@ -1,19 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-	<h1>{{ title }} is working!</h1>
+	<div class="nav">
+		<a href="">Home</a>
+		<a href="">Article Feed</a>
+		<a href="">API Documentation</a>
+		<a href="">Contact</a>
+	</div>
+	<div class="header">
+		<h1>Header Example</h1>
+	</div>
 	<hr>
-	{% for obj in object_list %}
-		<ul>
-			<a href='{{ obj.get_absolute_url }}'>
-		    	<h2>{{ obj.title }}</h2>
-			</a>
-			<li>{{ obj.body|truncatechars:50 }}</li>
-			<li>{{ obj.timestamp }}</li>
-			<li>{{ obj.updated }}</li>
-			<li>{{ obj.id }}</li>
-		</ul>
-		<hr>
-	{% endfor %}
+	<div class="post_feed">
+		{% for obj in object_list %}
+			<div class="post_PREVIEW_item">
+				<a href='{{ obj.get_absolute_url }}'>
+		    		<h2>{{ obj.title|truncatechars:30 }}</h2>
+				</a>
+				<hr>
+				<img src="{{ obj.image.url }}" />
+				<hr>
+				<li>Created: {{ obj.timestamp|date }}</li>
+				<li> ~~ </li>
+				<li>Last Update: {{ obj.updated|date }}</li>
+			</div>
+		{% endfor %}
+	</div>
 	<div class="pagination">
     	<span class="step-links">
        		{% if object_list.has_previous %}
