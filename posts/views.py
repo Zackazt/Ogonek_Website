@@ -65,3 +65,6 @@ def post_delete(request, id=id):
 	instance.delete()
 	messages.success(request, "Successfully deleted!")
 	return redirect("posts:list")
+
+def home_page(request):
+	return render(request, "home.html")
