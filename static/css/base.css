@@ -1,22 +1,16 @@
-h1{
-	color: #eac67a;
-	text-align: center;
-    font-size: 8em;
-}
 body{
    background: #fcf6e9;
-    
 }
 *{
 	list-style: none;
 
 }
-p{
+/*p{
 	max-width: 65%;
 	text-align: left;
 	margin: auto;
 	font-size: 1.5em;
-}
+}*/
 hr{
 	border: 1px solid #18121e;
 	max-width: 80%;
@@ -84,7 +78,7 @@ img{
 	text-align: center;
 	background-color: #d9d9d9;
 	padding-top: 0px;
-	background: -webkit-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Safari */
+	background: -webkit-radial-gradient(circle, #eac67a, #fcf6e9, #233237); /* Safari */
     background: -o-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Opera 11.6 to 12.0 */
     background: -moz-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Firefox 3.6 to 15 */
 	background: radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Standard syntax */
@@ -128,7 +122,16 @@ img{
 	background-color: #233237;
 	width: 100%;
 	margin: auto;
-	
+}
+.header h1{
+	color: #eac67a;
+	text-align: center;
+    font-size: 8em;
+}
+.header h2{
+	color: #eac67a;
+	text-align: center;
+    font-size: 4em;
 }
 .nav{
 	font-size: 1.2em;
@@ -144,9 +147,6 @@ img{
 	margin-right: 2%;
 	width: 15%;
 }
-.post_title{
-	font-size: 4em;
-}
 .fb-comments{
 	margin-left: 33%;
 }
@@ -158,4 +158,38 @@ img{
 	width: 350px;
 	margin: auto;
 	text-align: center;
+}
+.post_body{
+	width: 70%;
+	margin: auto;
+}
+.post_body h1{
+	text-align: left;
+	color: black;
+	font-size: 4em;
+}
+.post_body h2{
+	text-align: left;
+	color: black;
+	font-size: 3em;
+}
+.post_body h3{
+	text-align: left;
+	color: black;
+	font-size: 2.5em;
+}
+.post_body h4{
+	text-align: left;
+	color: black;
+	font-size: 2em;
+}
+.post_body h5{
+	text-align: left;
+	color: black;
+	font-size: 1.5em;
+}
+.post_body h6{
+	text-align: left;
+	color: black;
+	font-size: 1.2em;
 }

@@ -5,7 +5,7 @@
 
 {% block content %}
 	<div class="header">
-		<h1 class="post_title">{{ instance.title }}</h1>
+		<h2 class="post_title">{{ instance.title }}</h2>
 	</div>
 	<hr>
 	{% if instance.image %}
@@ -15,15 +15,15 @@
 	{% endif %}
 	<hr>
 
-	<p>{{ instance.body|linebreaks }}</p>
+	<div class='post_body'>{{ instance.body }}</div>
 
 	<div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
 	<div class="post_credits">
-	<h4>Created by: {{ instance.user.get_full_name }}</h4>
-	<h4>Created: {{ instance.timestamp }}</h4>
-	<h4>Last updated: {{ instance.updated }}</h4>
-	<h6>Post Number: {{ instance.id }}</h6>
+		<h4>Created by: {{ instance.user.get_full_name }}</h4>
+		<h4>Created: {{ instance.timestamp }}</h4>
+		<h4>Last updated: {{ instance.updated }}</h4>
+		<h6>Post Number: {{ instance.id }}</h6>
 	</div>
 
 	<div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
