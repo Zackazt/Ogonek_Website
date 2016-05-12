@@ -13,6 +13,8 @@
 				<img src="{{ object_list.0.image.url }}" />
 					<hr>
 			{% endif %}
+			<li>Created by: {{ object_list.0.user.get_full_name }}</li>
+			<br>
 			<li>Created: {{ object_list.0.timestamp|date }}</li>
 			<li> ~~ </li>
 			<li>Last Update: {{ object_list.0.updated|date }}</li>
@@ -27,6 +29,8 @@
 				<img src="{{ obj.image.url }}" />
 				<hr>
 				{% endif %}
+				<li>Created by: {{ obj.user.get_full_name }}</li>
+				<br>
 				<li>Created: {{ obj.timestamp|date }}</li>
 				<li> ~~ </li>
 				<li>Last Update: {{ obj.updated|date }}</li>
