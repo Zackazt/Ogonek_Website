@@ -1,20 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
+	{% include "header.html" %}
 	<hr>
 	<div class="post_feed">
-		{% for obj in object_list %}
+		{% if object_list %}
+		<div class="post_PREVIEW_TOP_item">
+			<a href='{{ object_list.0.get_absolute_url }}'>
+		    	<h2>{{ object_list.0.title|truncatechars:30 }}</h2>
+			</a>
+				<hr>
+			{% if object_list.0.image %}
+				<img src="{{ object_list.0.image.url }}" />
+					<hr>
+			{% endif %}
+			<li>Created: {{ object_list.0.timestamp|date }}</li>
+			<li> ~~ </li>
+			<li>Last Update: {{ object_list.0.updated|date }}</li>
+			</div>
+		{% for obj in object_list|slice:"1:" %}
 			<div class="post_PREVIEW_item">
 				<a href='{{ obj.get_absolute_url }}'>
 		    		<h2>{{ obj.title|truncatechars:30 }}</h2>
 				</a>
 				<hr>
+				{% if obj.image %}
 				<img src="{{ obj.image.url }}" />
 				<hr>
+				{% endif %}
 				<li>Created: {{ obj.timestamp|date }}</li>
 				<li> ~~ </li>
 				<li>Last Update: {{ obj.updated|date }}</li>
 			</div>
 		{% endfor %}
+		{% endif %}
 	</div>
 	<div class="pagination">
     	<span class="step-links">

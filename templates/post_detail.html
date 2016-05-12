@@ -4,13 +4,18 @@
 {% endblock head_title %}
 
 {% block content %}
-	<h1>{{ instance.title }}</h1>
+	<div class="header">
+		<h1 class="post_title">{{ instance.title }}</h1>
+	</div>
 	<hr>
+	{% if instance.image %}
 	<div class="post_image">
 		<img src="{{ instance.image.url }}" />
 	</div>
-	<p>{{ instance.body }}</p>
+	{% endif %}
 	<hr>
+	<p>{{ instance.body }}</p>
+	
 	<h4>Created: {{ instance.timestamp }}</h4>
 	<h4>Last updated: {{ instance.updated }}</h4>
 	<h6>Post Number: {{ instance.id }}</h6>
