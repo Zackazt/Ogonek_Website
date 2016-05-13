@@ -4,10 +4,16 @@
 {% endblock head_title %}
 
 {% block content %}
+
+
 	<div class="header">
 		<h2 class="post_title">{{ instance.title }}</h2>
 	</div>
+	{% if request.user.is_staff %}
+		<div class="edit_or_create_post_link_button"><a class="edit_or_create_post_link" href="{{ instance.get_absolute_uri }}edit">Edit Post</a></div>
+	{% endif %}
 	<hr>
+
 	{% if instance.image %}
 	<div class="post_image">
 		<img src="{{ instance.image.url }}" />

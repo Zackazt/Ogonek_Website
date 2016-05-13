@@ -51,6 +51,7 @@ def post_list(request):
 	return render(request, "post_list.html", context)
 
 def post_update(request, slug=None):
+	is_editing = True
 	if not request.user.is_staff or not request.user.is_superuser:
 		raise Http404
 	instance = get_object_or_404(Post, slug=slug)
@@ -64,6 +65,7 @@ def post_update(request, slug=None):
 		"title": instance.title,
 		"instance": instance,
 		"form": form,
+		"is_editing": is_editing,
 	}
 	return render(request, "post_form.html", context)
 

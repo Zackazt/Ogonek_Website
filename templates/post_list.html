@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+	
 	{% include "header.html" %}
+	{% if request.user.is_staff %}
+
+		
+	{% endif %}
 	<hr>
 	<div class="post_feed">
 		{% if object_list %}

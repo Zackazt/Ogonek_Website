@@ -193,3 +193,31 @@ img{
 	color: black;
 	font-size: 1.2em;
 }
+.edit_or_create_post_link{
+	clear: both;
+	text-decoration: none;
+	color: #eac67a;
+}
+.edit_or_create_post_link_button{
+	text-align: center;
+	width: 5%;
+	height: 30px;
+	background-color: #233237;
+	margin: auto;
+	border-radius: 5px;
+	padding-top: 10px;
+}
+.back_to_post_link{
+	clear: both;
+	text-decoration: none;
+	color: #eac67a;
+}
+.back_to_post_link_button{
+	text-align: center;
+	width: 5%;
+	height: 30px;
+	background-color: #233237;
+	border-radius: 5px;
+	padding-top: 10px;
+	margin-top: 20px;
+}
