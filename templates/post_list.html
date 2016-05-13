@@ -3,7 +3,7 @@
 	
 	{% include "header.html" %}
 	{% if request.user.is_staff %}
-
+		<div class="edit_or_create_post_link_button"><a class="edit_or_create_post_link" href="{{ instance.get_absolute_uri }}create">Create Post</a></div>
 		
 	{% endif %}
 	<hr>
