@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 def post_create(request):
-	if request.user.is_staff == False or request.user.is_superuser == False:
+	if request.user.is_staff == False:
 		raise Http404
 	if not request.user.is_authenticated():
 		raise Http404
@@ -52,7 +52,7 @@ def post_list(request):
 
 def post_update(request, slug=None):
 	is_editing = True
-	if not request.user.is_staff or not request.user.is_superuser:
+	if not request.user.is_staff:
 		raise Http404
 	instance = get_object_or_404(Post, slug=slug)
 	form = PostForm(request.POST or None, request.FILES or None, instance=instance)
@@ -70,13 +70,17 @@ def post_update(request, slug=None):
 	return render(request, "post_form.html", context)
 
 
-def post_delete(request, id=id):
+def post_delete(request, slug=None):
 	if not request.user.is_staff or not request.user.is_superuser:
 		raise Http404
-	instance = get_object_or_404(Post, id=id)
+	instance = get_object_or_404(Post, slug=slug)
 	instance.delete()
 	messages.success(request, "Successfully deleted!")
 	return redirect("posts:list")
 
 def home_page(request):
-	return render(request, "home.html")
+	queryset= Post.objects.all()
+	context = {
+		"object_list": queryset,
+	}
+	return render(request, "home.html", context)

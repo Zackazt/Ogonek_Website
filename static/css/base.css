@@ -3,7 +3,6 @@ body{
 }
 *{
 	list-style: none;
-
 }
 /*p{
 	max-width: 65%;
@@ -19,29 +18,20 @@ hr{
 img{
 	max-width: 300px;
 }
-.post_image{
-	display: table; 
-	margin: 0 auto;
-	
-}
-.post_image img{
-	max-height: 300px;
-}
 .post_PREVIEW_item{
 	width: 40%;
 	float: left;
-	height: 300px;
+	height: 330px;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 20px;
 	text-align: center;
-	background-color: #d9d9d9;
 	padding-top: 0px;
-	background: -webkit-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Safari */
-    background: -o-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Firefox 3.6 to 15 */
-	background: radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Standard syntax */
-	border-top:3px solid #18121e;
+	/*background: -webkit-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); 
+    background: -o-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); 
+    background: -moz-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); 
+	background: radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); */
+	/*border-top:3px solid #18121e;*/
 	border-bottom:3px solid #18121e;
 	border-radius: 0px 0px 0px 0px;
 }
@@ -70,21 +60,26 @@ img{
 .post_PREVIEW_item h2{
 	font-size: 2em;
 }
+.post_PREVIEW_item .fb-like{
+	margin-left: 0px;
+}
 .post_PREVIEW_TOP_item{
 	width: 100%;
 	clear: both;
-	height: 350px;
+	height: 380px;
 	margin-bottom: 20px;
 	text-align: center;
-	background-color: #d9d9d9;
-	padding-top: 0px;
-	background: -webkit-radial-gradient(circle, #eac67a, #fcf6e9, #233237); /* Safari */
-    background: -o-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Firefox 3.6 to 15 */
-	background: radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); /* Standard syntax */
-	border-top:3px solid #18121e;
+	/*background-color: #d9d9d9;
+	background: -webkit-radial-gradient(circle, #eac67a, #fcf6e9, #233237); 
+    background: -o-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9);  Opera 11.6 to 12.0 
+    background: -moz-radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); 
+	background: radial-gradient(circle, #eac67a, #fcf6e9, #fcf6e9); */
+	/*border-top:3px solid #18121e;*/
 	border-bottom:3px solid #18121e;
 	border-radius: 0px 0px 0px 0px;
+}
+.post_PREVIEW_TOP_item .fb-like{
+	margin-left: 0px;
 }
 .post_PREVIEW_TOP_item img{
 	max-height: 150px;
@@ -139,7 +134,6 @@ img{
 	background-color: #fcf6e9;
 	width: 100%;
 	margin: auto;
-
 }
 .nav a{
 	color: #984b43;
@@ -152,46 +146,56 @@ img{
 }
 .fb-like{
 	margin-top: 20px;
-	margin-left: 47%;
+	margin-left: 15%;
+}
+.post_image{
+	display: table; 
+	margin: auto;
+	margin-bottom: 50px;
+}
+.post_image img{
+	max-height: 300px;
 }
 .post_credits{
-	width: 350px;
-	margin: auto;
-	text-align: center;
+	margin-left: 15%;
+	text-align: left;
 }
 .post_body{
 	width: 70%;
 	margin: auto;
 }
+.post_body p{
+	font-size: 2em;
+}
 .post_body h1{
 	text-align: left;
 	color: black;
-	font-size: 4em;
+	font-size: 5em;
 }
 .post_body h2{
 	text-align: left;
 	color: black;
-	font-size: 3em;
+	font-size: 4em;
 }
 .post_body h3{
 	text-align: left;
 	color: black;
-	font-size: 2.5em;
+	font-size: 3.5em;
 }
 .post_body h4{
 	text-align: left;
 	color: black;
-	font-size: 2em;
+	font-size: 3em;
 }
 .post_body h5{
 	text-align: left;
 	color: black;
-	font-size: 1.5em;
+	font-size: 2.5em;
 }
 .post_body h6{
 	text-align: left;
 	color: black;
-	font-size: 1.2em;
+	font-size: 2.2em;
 }
 .edit_or_create_post_link{
 	clear: both;
@@ -201,11 +205,12 @@ img{
 .edit_or_create_post_link_button{
 	text-align: center;
 	width: 5%;
-	height: 30px;
+	height: 20px;
 	background-color: #233237;
 	margin: auto;
 	border-radius: 5px;
-	padding-top: 10px;
+	margin-bottom: 50px;
+	padding: 5px;
 }
 .back_to_post_link{
 	clear: both;

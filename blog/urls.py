@@ -18,9 +18,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url, include
 from django.contrib import admin
+from posts.views import home_page
 
 
 urlpatterns = [
+    url(r'^$', home_page),
     url(r'^admin/', admin.site.urls),
     url(r'^posts/', include('posts.urls', namespace='posts')),
 ]

@@ -4,9 +4,12 @@
 	{% include "header.html" %}
 	{% if request.user.is_staff %}
 		<div class="edit_or_create_post_link_button"><a class="edit_or_create_post_link" href="{{ instance.get_absolute_uri }}create">Create Post</a></div>
+<<<<<<< a33e5b4a316f3617d61ef12e353e0959e2c94c93
 		
+=======
+>>>>>>> Created a home page.  Added more navigation options including being able to edit the page.  Also, you can only edit or delete posts that you created. Added to the design.
 	{% endif %}
-	<hr>
+	<br>
 	<div class="post_feed">
 		{% if object_list %}
 		<div class="post_PREVIEW_TOP_item">
@@ -23,6 +26,8 @@
 			<li>Created: {{ object_list.0.timestamp|date }}</li>
 			<li> ~~ </li>
 			<li>Last Update: {{ object_list.0.updated|date }}</li>
+			<br>
+			<div class="fb-like" data-href="{{ object_list.0.get_absolute_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 			</div>
 		{% for obj in object_list|slice:"1:" %}
 			<div class="post_PREVIEW_item">
@@ -39,6 +44,8 @@
 				<li>Created: {{ obj.timestamp|date }}</li>
 				<li> ~~ </li>
 				<li>Last Update: {{ obj.updated|date }}</li>
+				<br>
+				<div class="fb-like" data-href="{{ obj.get_absolute_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 			</div>
 		{% endfor %}
 		{% endif %}
