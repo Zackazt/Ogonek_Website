@@ -22,7 +22,9 @@ The development team will remain very small in the beginning so our interest in 
 If you are interested in getting involved in this project, please email me at: zackazt@gmail.com
 
 ---
-
+### Deployment
+---
+My plan is to use GitHub Pages to deploy the website for basic testing, before releasing using either Heroku/AWS, or Digital Ocean/AWS for official release.
 
 
 
