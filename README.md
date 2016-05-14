@@ -24,8 +24,12 @@ If you are interested in getting involved in this project, please email me at: z
 ---
 ### Deployment
 ---
-My plan is to use GitHub Pages to deploy the website for basic testing, before releasing using either Heroku/AWS, or Digital Ocean/AWS for official release.
-
+My plan is to use a mixture of AWS and Digital Ocean for deployment. 
+---
+## Currently In Progress:
+* **Ability to filter through posts by genre.**
+* **A page for User profiles where they can link to their professional profiles, and receive credit for their work.**
+* **A markdown tutorial/reference will be placed in the create post area.**
 
 
 
