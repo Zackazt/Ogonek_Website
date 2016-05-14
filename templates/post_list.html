@@ -12,6 +12,7 @@
 			<a href='{{ object_list.0.get_absolute_url }}'>
 		    	<h2>{{ object_list.0.title|truncatechars:30 }}</h2>
 			</a>
+			<li>{{ object_list.0.genre }}</li>
 				<hr>
 			{% if object_list.0.image %}
 				<img src="{{ object_list.0.image.url }}" />
@@ -30,6 +31,7 @@
 				<a href='{{ obj.get_absolute_url }}'>
 		    		<h2>{{ obj.title|truncatechars:30 }}</h2>
 				</a>
+				<li>{{ obj.genre }}</li>
 				<hr>
 				{% if obj.image %}
 				<img src="{{ obj.image.url }}" />
