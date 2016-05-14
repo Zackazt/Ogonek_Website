@@ -24,7 +24,7 @@ If you are interested in getting involved in this project, please email me at: z
 ---
 ### Deployment
 ---
-My plan is to use a mixture of AWS and Digital Ocean for deployment. 
+###### My plan is to use a mixture of AWS and Digital Ocean for deployment. 
 ---
 ## Currently In Progress:
 * **Ability to filter through posts by genre.**
