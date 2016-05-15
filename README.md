@@ -31,6 +31,18 @@ If you are interested in getting involved in this project, please email me at: z
 * **A page for User profiles where they can link to their professional profiles, and receive credit for their work.**
 * **A markdown tutorial/reference will be placed in the create post area.**
 
+# Checklist
+
+| What Needs To Be Done                                                        | Complete? |
+|-----------------|:----------------------------------------------------------:|:---------:|
+| Users           | User model, user image, extra user credentials...          | Partial   |
+| Profiles        | Formatting, displaying all aspects of user's credentials.  | Partial   |
+| Layout          | The design is still pretty boring.  Needs some motion.     | Partial   |
+| Authentication  | Verify password field, verify email is authentic.          | No        |
+| API             | Implement an API that can be used cross platform.          | No        |
+| Ads             | Discrete ads, not overbearing, that can add to the design. | No        |
+
+
 
 
 
