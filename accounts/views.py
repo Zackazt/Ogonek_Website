@@ -37,10 +37,15 @@ def register_view(request):
 	form = UserRegistrationForm(request.POST or None)
 	if form.is_valid():
 		username = form.cleaned_data.get("username")
+		password = form.cleaned_data.get("password")
+		first_name = form.cleaned_data.get("first_name")
+		last_name = form.cleaned_data.get("last_name")
 		username = username
 		user = form.save(commit=False)
-		password = form.cleaned_data.get("password")
+		user.first_name = first_name
+		user.last_name = last_name
 		user.set_password(password)
+		user.is_staff=True  #Giving user staff privelages.
 		user.save()
 		new_user = authenticate(username=username, password=password)
 		login(request, new_user)

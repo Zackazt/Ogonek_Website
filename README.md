@@ -43,6 +43,12 @@ If you are interested in getting involved in this project, please email me at: z
 | Ads                     | Discrete ads, not overbearing, that can add to the design. | No        |
 
 
+###### The following log starts from 5/15/16
+### Log:
+* Created another password field in order to verify the password.  This way if there is a typo, the user will not be stuck with a password they do not know.
+* Created First Name and Last Name entries when registering for an account.  These fields are mandatory.
+* User is added as staff after registering. In the future I willmake it to where they are not staff until they verify their email address.
+
 
 
 
