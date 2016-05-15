@@ -22,6 +22,7 @@ from posts.views import home_page
 
 from accounts.views import (login_view, register_view, logout_view,)
 
+
 urlpatterns = [
     url(r'^$', home_page),
     url(r'^admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     url(r'^login/', login_view, name='login'),
     url(r'^logout/', logout_view, name='logout'),
     url(r'^register/', register_view, name='register'),
+    url(r'^user/', include('userprofile.urls', namespace='profiles')),
 ]
 
 if settings.DEBUG:

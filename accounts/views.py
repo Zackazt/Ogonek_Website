@@ -9,6 +9,7 @@ from .forms import UserLoginForm, UserRegistrationForm
 # Create your views here.
 def login_view(request):
 	on_page = request.GET.get('on_page')
+	print(on_page)
 	title = "Login"
 	form = UserLoginForm(request.POST or None)
 	if form.is_valid():
@@ -17,7 +18,12 @@ def login_view(request):
 		password = form.cleaned_data.get("password")
 		user = authenticate(username=username, password=password)
 		login(request, user)
-		return redirect(on_page)
+		if on_page == "/register/":
+			return redirect("/")
+		if on_page != request.path:
+			return redirect(on_page)
+		else:
+			return redirect("/")
 	context = {
 		"form": form,
 		"title": title,
@@ -26,6 +32,7 @@ def login_view(request):
 
 def register_view(request):
 	on_page = request.GET.get('on_page')
+	print(on_page)
 	title = "Register"
 	form = UserRegistrationForm(request.POST or None)
 	if form.is_valid():
@@ -37,7 +44,12 @@ def register_view(request):
 		user.save()
 		new_user = authenticate(username=username, password=password)
 		login(request, new_user)
-		return redirect(on_page)
+		if on_page == "/login/":
+			return redirect("/")
+		if on_page != request.path:
+			return redirect(on_page)
+		else:
+			return redirect("/")
 	context = {
 		"form": form,
 		"title": title,
@@ -47,4 +59,7 @@ def register_view(request):
 def logout_view(request):
 	on_page = request.GET.get('on_page')
 	logout(request)
-	return redirect(on_page)
+	if on_page != request.path:
+			return redirect(on_page)
+	else:
+		return redirect("/")

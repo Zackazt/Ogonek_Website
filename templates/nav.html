@@ -6,15 +6,17 @@
 		<a href="">Contact</a>
 		{% if request.user.is_authenticated == False %}
 		<div class="login_logout">
-			<a href="/login/?on_page={{ request.path }}">Log In</a>
+			<a class="login_logout_text" href="/login/?on_page={{ request.path }}">Log In</a>
 			/
-			<a href="/register/?on_page={{ request.path }}">Register</a>
+			<a class="login_logout_text" href="/register/?on_page={{ request.path }}">Register</a>
 			</div>
 		{% endif %}
 
 		{% if request.user.is_authenticated %}
 		<div class="login_logout">
-			<a href="/logout/?on_page={{ request.path }}">Log Out</a>
+			<a class="login_logout_text" href="/user/{{ user.username }}">{{ request.user.username }}</a>
+			/
+			<a class="login_logout_text" href="/logout/?on_page={{ request.path }}">Log Out</a>
 		</div>
 		{% endif %}
 </div>

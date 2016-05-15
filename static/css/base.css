@@ -228,7 +228,11 @@ img{
 }
 .login_logout{
 	float: right;
-	margin-right: 0%;
-	width: 8%;
+	/*margin-right: 0%;*/
+	width: 30%;
+	text-align: right;
+	display: inline-block;
+}
+.login_logout_text{
 	text-align: right;
 }
