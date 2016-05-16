@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     #3rd Party Libraries
     'pagedown',
     'avatar',
+    'star_ratings',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -136,3 +137,12 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 AUTH_PROFILE_MODULE = 'userprofile.User_Feats'
+
+TEMPLATE_CONTEXT_PROCESSORS = ["django.contrib.auth.context_processors.auth",
+"django.template.context_processors.debug",
+"django.template.context_processors.i18n",
+"django.template.context_processors.media",
+"django.template.context_processors.static",
+"django.template.context_processors.tz",
+"django.contrib.messages.context_processors.messages",
+'django.core.context_processors.request',]

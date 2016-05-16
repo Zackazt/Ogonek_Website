@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^register/', register_view, name='register'),
     url(r'^user/', include('userprofile.urls', namespace='profiles')),
     url(r'^avatar/', include('avatar.urls')),
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 ]
 
 if settings.DEBUG:

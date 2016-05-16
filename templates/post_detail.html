@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% load avatar_tags %}
+{% load static %}
+{% load ratings %}
+
 {% block head_title %}
 	{{  instance.title }} - {{  block.super }}
 {% endblock head_title %}
 
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
 
 	<div class="header">
 		<h2 class="post_title">{{ instance.title }}</h2>
@@ -16,7 +20,7 @@
 		<div class="edit_or_create_post_link_button"><a class="edit_or_create_post_link" href="{{ instance.get_absolute_uri }}delete">Delete Post</a></div>
 	{% endif %}
 	<hr>
-
+	
 	{% if instance.image %}
 	<div class="post_image">
 		<img src="{{ instance.image.url }}" />
@@ -28,6 +32,9 @@
 	<div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
 	<div class="post_credits">
+		<br>
+		{% ratings instance %}
+		<br>
 		<a href="/user/{{ instance.user.username }}">{% avatar instance.user 80 %}</a>
 		<h4>Created by: <u><a href="/user/{{ instance.user.username }}">{{ instance.user.get_full_name }}</h4></a></u>
 		<h4>Created: {{ instance.timestamp }}</h4>
