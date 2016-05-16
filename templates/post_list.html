@@ -18,8 +18,8 @@
 			<li>{{ object_list.0.genre }}</li>
 				<hr>
 			{% if object_list.0.image %}
-				<img src="{{ object_list.0.image.url }}" />
-					<hr>
+				<a href='{{ object_list.0.get_absolute_url }}'><img src="{{ object_list.0.image.url }}" /></a>
+				<hr>
 			{% endif %}
 			<div>
 				<a href="/user/{{ object_list.0.user.username }}">{% avatar object_list.0.user 50 %}</a>
@@ -41,8 +41,8 @@
 				<li>{{ obj.genre }}</li>
 				<hr>
 				{% if obj.image %}
-				<img src="{{ obj.image.url }}" />
-				<hr>
+					<a href='{{ obj.get_absolute_url }}'><img src="{{ obj.image.url }}" /></a>
+					<hr>
 				{% endif %}
 				<div>
 					<a href="/user/{{ obj.user.username }}">{% avatar obj.user 50 %}</a>

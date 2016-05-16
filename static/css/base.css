@@ -64,6 +64,12 @@ img{
 }
 .post_PREVIEW_item h2{
 	font-size: 2em;
+	transition: 0.3s;
+}
+.post_PREVIEW_item h2:hover{
+	transition: 0.3s;
+	color: #eac67a;
+	text-shadow: 5px 2px #233237;
 }
 .post_PREVIEW_item .fb-like{
 	margin-left: 0px;
@@ -114,6 +120,12 @@ img{
 }
 .post_PREVIEW_TOP_item h2{
 	font-size: 2em;
+	transition: 0.3s;
+}
+.post_PREVIEW_TOP_item h2:hover{
+	transition: 0.3s;
+	color: #eac67a;
+	text-shadow: 5px 2px #233237;
 }
 .post_feed{
 	width: 80%;
