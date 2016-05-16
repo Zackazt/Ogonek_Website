@@ -52,6 +52,7 @@ If you are interested in getting involved in this project, please email me at: z
 * Designed the forms.
 * Added capabilities for users to have profile pictures.
 * Added links to user profiles int he navigation area, along with various places throughout the site.
+* Added ability to rate posts out of 5 stars.
 
 
 
