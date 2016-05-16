@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% load avatar_tags %}
 {% block content %}
-	<h1>{{ which_user.get_full_name }} - {{ username_destination }}</h1>
-	{% avatar which_user %}
-	<a href="{% url 'avatar_change' %}">Change your avatar</a>
+	<h1>{{ which_user.get_full_name }}</h1>
+	<div class="profile_picture_on_profile">
+		{% avatar which_user 200 %}
+	</div>
+	{% if request.user == which_user %}
+	<a href="{% url 'avatar_change' %}">Change your profile image</a>
+	{% endif %}
+	<h3>{{ username_destination }}</h3>
+	<br>
 	<!-- Add a badge for when the user is a super user, or a creator, or, etc.-->
 	<!-- Add how long the member has been on this site.-->
 {% endblock content %}
