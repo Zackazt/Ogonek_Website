@@ -47,8 +47,11 @@ If you are interested in getting involved in this project, please email me at: z
 ### Log:
 * Created another password field in order to verify the password.  This way if there is a typo, the user will not be stuck with a password they do not know.
 * Created First Name and Last Name entries when registering for an account.  These fields are mandatory.
-* User is added as staff after registering. In the future I willmake it to where they are not staff until they verify their email address.
-
+* User is added as staff after registering. In the future I will make it to where they are not staff until they verify their email address.
+* Created user profiles.
+* Designed the forms.
+* Added capabilities for users to have profile pictures.
+* Added links to user profiles int he navigation area, along with various places throughout the site.
 
 
 
