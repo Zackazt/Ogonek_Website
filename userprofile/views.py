@@ -10,6 +10,7 @@ def userprofile_view(request):
 	url = request.path
 	username = url.split('/')[-1]
 	which_user = get_object_or_404(User, username=username)
+	# posts = 
 	if which_user:
 		context = {
 			"username_destination": username,

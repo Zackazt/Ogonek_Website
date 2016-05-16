@@ -1,9 +1,12 @@
 {% extends "base.html" %}
+{% load avatar_tags %}
 {% block content %}
 	
 	{% include "header.html" %}
 	{% if request.user.is_staff %}
+	<hr>
 		<div class="edit_or_create_post_link_button"><a class="edit_or_create_post_link" href="{{ instance.get_absolute_uri }}create">Create Post</a></div>
+	<hr>
 	{% endif %}
 	<br>
 	<div class="post_feed">
@@ -18,10 +21,14 @@
 				<img src="{{ object_list.0.image.url }}" />
 					<hr>
 			{% endif %}
-			<li>Created by: <a href="/user/{{ object_list.0.user.username }}"><u>{{ object_list.0.user.get_full_name }}</u></a></li>
+			<div>
+				<a href="/user/{{ object_list.0.user.username }}">{% avatar object_list.0.user 50 %}</a>
+			</div>
+			<br>
+			<li>Created by: <a href="/user/{{ object_list.0.user.username }}"><u>{{ object_list.0.user.get_full_name }}</u> - <u>{{ object_list.0.user.username }}</u></a></li>
 			<br>
 			<li>Created: {{ object_list.0.timestamp|date }}</li>
-			<li> ~~ </li>
+			<li> - </li>
 			<li>Last Update: {{ object_list.0.updated|date }}</li>
 			<br>
 			<div class="fb-like" data-href="{{ object_list.0.get_absolute_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -37,10 +44,14 @@
 				<img src="{{ obj.image.url }}" />
 				<hr>
 				{% endif %}
-				<li>Created by: <a href="/user/{{ obj.user.username }}"><u>{{ obj.user.get_full_name }}</u></a></li>
+				<div>
+					<a href="/user/{{ obj.user.username }}">{% avatar obj.user 50 %}</a>
+				</div>
+				<br>
+				<li>Created by: <a href="/user/{{ obj.user.username }}"><u>{{ obj.user.get_full_name }}</u> - <u>{{ obj.user.username }}</u></a></li>
 				<br>
 				<li>Created: {{ obj.timestamp|date }}</li>
-				<li> ~~ </li>
+				<li> - </li>
 				<li>Last Update: {{ obj.updated|date }}</li>
 				<br>
 				<div class="fb-like" data-href="{{ obj.get_absolute_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>

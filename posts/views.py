@@ -34,7 +34,7 @@ def post_detail(request, slug=None):
 
 def post_list(request):
 	queryset_list= Post.objects.all().order_by("-updated")
-	paginator = Paginator(queryset_list, 20) # Show 25 contacts per page
+	paginator = Paginator(queryset_list, 11) # Show x posts per page
 	page = request.GET.get('page')
 	try:
 		queryset = paginator.page(page)
