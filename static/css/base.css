@@ -19,7 +19,7 @@ img{
 	max-width: 300px;
 }
 .post_PREVIEW_item{
-	width: 40%;
+	width: calc(40% - 12px);
 	float: left;
 	height: 503px;
 	margin-left: 5%;
@@ -34,6 +34,8 @@ img{
 	/*border-top:3px solid #18121e;*/
 	border-bottom:3px solid #18121e;
 	border-radius: 0px 0px 0px 0px;
+	background-color: rgba(234, 198, 122, 0.5);
+	border:3px solid #233237;
 }
 
 .post_PREVIEW_item img{
@@ -68,8 +70,8 @@ img{
 }
 .post_PREVIEW_item h2:hover{
 	transition: 0.3s;
-	color: #eac67a;
-	text-shadow: 5px 2px #233237;
+	color: #233237;
+	text-shadow: 5px 2px #eac67a;
 }
 .post_PREVIEW_item .fb-like{
 	margin-left: 0px;
@@ -77,7 +79,7 @@ img{
 .post_PREVIEW_TOP_item{
 	width: 100%;
 	clear: both;
-	height: 533px;
+	height: 553px;
 	margin-bottom: 20px;
 	text-align: center;
 	/*background-color: #d9d9d9;
@@ -88,6 +90,8 @@ img{
 	/*border-top:3px solid #18121e;*/
 	border-bottom:3px solid #18121e;
 	border-radius: 0px 0px 0px 0px;
+	background-color: rgba(234, 198, 122, 0.5);
+	border:3px solid #233237;
 }
 .post_PREVIEW_TOP_item .fb-like{
 	margin-left: 0px;
@@ -124,8 +128,15 @@ img{
 }
 .post_PREVIEW_TOP_item h2:hover{
 	transition: 0.3s;
-	color: #eac67a;
-	text-shadow: 5px 2px #233237;
+	color: #233237;
+	text-shadow: 5px 2px #eac67a;
+}
+.preview_box{
+	margin: auto;
+	padding: 15px;
+	border-radius: 50px;
+	width: 90%;
+	background-color: rgba(35, 50, 55, 0.9);
 }
 .post_feed{
 	width: 80%;
@@ -319,6 +330,6 @@ form li{
 	color: #eac67a;
 }
 .star-ratings{
-	color: #984b43;
+	color: #eac67a;
 	font-size: 0.9em;
 }
