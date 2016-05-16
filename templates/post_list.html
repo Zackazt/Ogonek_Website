@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load avatar_tags %}
 {% block content %}
+{% load ratings %}
 	
 	{% include "header.html" %}
 	{% if request.user.is_staff %}
@@ -19,6 +20,7 @@
 				<hr>
 			{% if object_list.0.image %}
 				<a href='{{ object_list.0.get_absolute_url }}'><img src="{{ object_list.0.image.url }}" /></a>
+				{% ratings object_list.0 %}
 				<hr>
 			{% endif %}
 			<div>
@@ -42,6 +44,7 @@
 				<hr>
 				{% if obj.image %}
 					<a href='{{ obj.get_absolute_url }}'><img src="{{ obj.image.url }}" /></a>
+					{% ratings obj %}
 					<hr>
 				{% endif %}
 				<div>
