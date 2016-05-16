@@ -64,6 +64,8 @@ def register_view(request):
 def logout_view(request):
 	on_page = request.GET.get('on_page')
 	logout(request)
+	if on_page == "/posts/create/":
+			return redirect("/")
 	if on_page != request.path:
 			return redirect(on_page)
 	else:

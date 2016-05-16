@@ -7,10 +7,13 @@
 
 
 {% block content %}
-<h1>{{ title }}</h1>
+<div class="form_header_container">
+	<h1>{{ title }}</h1>
+</div>
 <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
 	{{ form.as_p }}
-	<input type="submit" value="{{ title }}"/>
+	<input class="form_input" type="submit" value="{{ title }}"/>
 </form>
+
 
 {% endblock content %}

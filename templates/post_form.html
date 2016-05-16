@@ -7,7 +7,9 @@
 
 
 {% block content %}
-<h1>Create A Post</h1>
+<div class="form_header_container">
+	<h1>Create A Post</h1>
+</div>
 <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
 	{{ form.as_p }}
 	<input type="submit" value="Submit Post"/>
@@ -15,5 +17,6 @@
 	<div class="back_to_post_link_button"><a class="back_to_post_link" href="{{ request.META.HTTP_REFERER }}">Back To Post</a></div>
 	{% endif %}
 </form>
+
 
 {% endblock content %}
