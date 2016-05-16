@@ -1,4 +1,5 @@
 from django import forms
+from .models import UserProfile
 from django.contrib.auth import (
 	authenticate, 
 	get_user_model, 
@@ -32,7 +33,8 @@ class UserRegistrationForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput)
 	password_verify = forms.CharField(widget=forms.PasswordInput)
 	first_name = forms.CharField(label="First Name")
-	last_name = forms.CharField(label="Lst Name")
+	last_name = forms.CharField(label="Last Name")
+	# description = forms.TextField(max_length=1000)
 	class Meta:
 		model = User
 		fields = [
@@ -57,3 +59,4 @@ class UserRegistrationForm(forms.ModelForm):
 		if email_qs.exists():
 			raise forms.ValidationError("This email has alrerady been registered.")
 		return super(UserRegistrationForm, self).clean(*args, **kwargs)
+

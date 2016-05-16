@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^logout/', logout_view, name='logout'),
     url(r'^register/', register_view, name='register'),
     url(r'^user/', include('userprofile.urls', namespace='profiles')),
+    url(r'^avatar/', include('avatar.urls')),
 ]
 
 if settings.DEBUG:

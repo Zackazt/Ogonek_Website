@@ -38,7 +38,7 @@ If you are interested in getting involved in this project, please email me at: z
 | Users                   | User model, user image, extra user credentials...          | Partial   |
 | Profiles                | Formatting, displaying all aspects of user's credentials.  | Partial   |
 | Layout                  | The design is still pretty boring.  Needs some motion.     | Partial   |
-| Authentication          | Verify password field, verify email is authentic.          | No        |
+| Authentication          | Verify password field, verify email is authentic.          | Partial   |
 | API                     | Implement an API that can be used cross platform.          | No        |
 | Ads                     | Discrete ads, not overbearing, that can add to the design. | No        |
 

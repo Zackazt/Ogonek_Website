@@ -2,7 +2,6 @@ from django import forms
 from .models import Post
 
 
-
 class PostForm(forms.ModelForm):
 	genre_list = (
 			('Opinion', 'Opinion'), 
