@@ -4,6 +4,8 @@ from django.conf.urls import url
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from posts.models import Post 
+from django.contrib.contenttypes.fields import GenericRelation
+from star_ratings.models import Rating
 
 
 # Create your views here.
