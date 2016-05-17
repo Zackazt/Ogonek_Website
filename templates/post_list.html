@@ -20,8 +20,12 @@
 				<!-- <hr> -->
 			{% if object_list.0.image %}
 			<div class="preview_box">
-				<a href='{{ object_list.0.get_absolute_url }}'><img src="{{ object_list.0.image.url }}" /></a>
-				{% ratings object_list.0 %}
+				<div class="preview_TOP_image">
+					<a href='{{ object_list.0.get_absolute_url }}'><img src="{{ object_list.0.image.url }}" /></a>
+				</div>
+				<div class="preview_TOP_rating">
+					{% ratings object_list.0 %}
+				</div>
 
 				<!-- <hr> -->
 				</div>
@@ -47,8 +51,12 @@
 				<!-- <hr> -->
 				{% if obj.image %}
 				<div class="preview_box">
-					<a href='{{ obj.get_absolute_url }}'><img src="{{ obj.image.url }}" /></a>
-					{% ratings obj %}
+					<div class="preview_image">
+						<a href='{{ obj.get_absolute_url }}'><img src="{{ obj.image.url }}" /></a>
+					</div>
+					<div class="preview_rating">
+						{% ratings obj %}
+					</div>
 				</div>
 					<!-- <hr> -->
 				{% endif %}

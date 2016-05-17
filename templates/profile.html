@@ -1,15 +1,52 @@
 {% extends "base.html" %}
 {% load avatar_tags %}
+{% load ratings %}
 {% block content %}
-	<h1>{{ which_user.get_full_name }}</h1>
+	
 	<div class="profile_picture_on_profile">
+		<h1>{{ which_user.get_full_name }}</h1>
 		{% avatar which_user 200 %}
+		{% if request.user == which_user %}
+			<a href="{% url 'avatar_change' %}">Change your profile image</a>
+		{% endif %}
+		<h3>{{ username_destination }}</h3>
 	</div>
-	{% if request.user == which_user %}
-	<a href="{% url 'avatar_change' %}">Change your profile image</a>
-	{% endif %}
-	<h3>{{ username_destination }}</h3>
+	
+	<hr>
 	<br>
+	<!-- <ul class="profile_post_list"> -->
+	{% for obj in user_posts|slice:":6" %}
+			<div class="post_PREVIEW_item">
+				<a href='{{ obj.get_absolute_url }}'>
+		    		<h2>{{ obj.title|truncatechars:30 }}</h2>
+				</a>
+				<li>{{ obj.genre }}</li>
+				<!-- <hr> -->
+				{% if obj.image %}
+				<div class="preview_box">
+					<div class="preview_image">
+						<a href='{{ obj.get_absolute_url }}'><img src="{{ obj.image.url }}" /></a>
+					</div>
+					<div class="preview_rating">
+						{% ratings obj %}
+					</div>
+				</div>
+					<!-- <hr> -->
+				{% endif %}
+				<div>
+					<a href="/user/{{ obj.user.username }}">{% avatar obj.user 50 %}</a>
+				</div>
+				<br>
+				<li>Created by: <a href="/user/{{ obj.user.username }}"><u>{{ obj.user.get_full_name }}</u> - <u>{{ obj.user.username }}</u></a></li>
+				<br>
+				<li>Created: {{ obj.timestamp|date }}</li>
+				<li> - </li>
+				<li>Last Update: {{ obj.updated|date }}</li>
+				<br>
+				<div class="fb-like" data-href="{{ obj.get_absolute_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+			</div>
+		{% endfor %}
+	<!-- </ul> -->
 	<!-- Add a badge for when the user is a super user, or a creator, or, etc.-->
 	<!-- Add how long the member has been on this site.-->
 {% endblock content %}

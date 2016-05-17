@@ -137,6 +137,7 @@ img{
 	border-radius: 50px;
 	width: 90%;
 	background-color: rgba(35, 50, 55, 0.9);
+	overflow: auto;
 }
 .post_feed{
 	width: 80%;
@@ -276,6 +277,11 @@ img{
 .login_logout_text{
 	text-align: right;
 }
+.profile_picture_on_profile{
+	margin: auto;
+	width: 200px;
+	text-align: center;
+}
 .profile_picture_on_profile img{
 	border-radius: 10px;
 }
@@ -332,4 +338,33 @@ form li{
 .star-ratings{
 	color: #eac67a;
 	font-size: 0.9em;
+}
+/*.profile_post_list{
+	display: inline;
+}*/
+.profile_post_list img{
+	height: 100px;
+}
+.profile_post_list div{
+	float: left;
+}
+.profile_post_list .ratings_in_profile{
+	clear: both;
+}
+.preview_TOP_image{
+	float: left;
+	margin-left: 25%;
+}
+.preview_TOP_rating{
+	float: right;
+	margin-right: 25%;
+	margin-top: 40px;
+	text-align: right;
+}
+.preview_image{
+	float: left;
+}
+.preview_rating{
+	float: right;
+	text-align: right;
 }

@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.conf.urls import url
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
+from posts.models import Post 
 
 
 # Create your views here.
@@ -11,11 +12,12 @@ def userprofile_view(request):
 	if url is not None:
 		username = url.split('/')[-1]
 		which_user = get_object_or_404(User, username=username)
-	# posts = 
+		user_posts = Post.objects.filter(user=which_user)
 	if which_user:
 		context = {
 			"username_destination": username,
 			"which_user": which_user,
+			"user_posts": user_posts,
 		}
 		return render(request, "profile.html", context)
 	else:
