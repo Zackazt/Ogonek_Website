@@ -282,8 +282,13 @@ img{
 	width: 200px;
 	text-align: center;
 }
+.profile_picture_on_profile a{
+	text-decoration: none;
+	color: #984b43;
+}
 .profile_picture_on_profile img{
 	border-radius: 10px;
+	border:2px solid #233237;
 }
 input[type="text"], input[type="email"], input[type="password"]{
 	width: 50%;
@@ -367,4 +372,43 @@ form li{
 .preview_rating{
 	float: right;
 	text-align: right;
+}
+.recent_posts_header{
+	width: 90%;
+	background-color: #233237;
+	margin: auto;
+}
+.recent_posts_header h1{
+	text-align: center;
+	font-size: 4em;
+	color: #eac67a;
+}
+.head_of_profile h1{
+	text-align: center;
+	font-size: 7em;
+	color: #eac67a;
+}
+.head_of_profile{
+	/*background-color: #984b43;*/
+	/*background-color: rgba(234, 198, 122, 0.5);*/
+	padding: 20px;
+	margin-top: 0px;
+}
+.head_of_profile .recent_posts_header{
+	border-radius: 10px;
+}
+.head_of_profile h2, .head_of_profile h3{
+	text-align: center;
+	color: #233237;
+}
+.head_of_profile hr{
+	border-color: #984b43;
+	box-shadow: 0px 0px 2px #eac67a;
+}
+.profile_header_credentials{
+	width: 70%;
+	margin: auto;
+	background-color: rgba(234, 198, 122, 0.5);
+	padding: 25px;
+	border:3px solid #233237;
 }

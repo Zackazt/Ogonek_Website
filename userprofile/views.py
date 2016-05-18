@@ -14,7 +14,7 @@ def userprofile_view(request):
 	if url is not None:
 		username = url.split('/')[-1]
 		which_user = get_object_or_404(User, username=username)
-		user_posts = Post.objects.filter(user=which_user)
+		user_posts = Post.objects.filter(user=which_user).order_by('-timestamp')
 	if which_user:
 		context = {
 			"username_destination": username,
